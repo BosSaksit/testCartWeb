@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>productInfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="getStatus == 'Add'">
+  <ion-row>
+    <ion-col size="3"></ion-col>
+    <ion-col class="ion-text-center">
+      <h4>AddProduct</h4>
+      <ion-list>
+        <ion-item>
+          <ion-label>ProductName &nbsp;&nbsp;</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductPrice &nbsp;&nbsp;</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductDetail &nbsp;&nbsp;</ion-label>
+          <ion-input autofocus></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button color="success">Submit</ion-button>
+    </ion-col>
+    <ion-col size="3"></ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-content *ngIf="getStatus == 'Edit'">
+  <ion-row>
+    <ion-col size="3"></ion-col>
+    <ion-col class="ion-text-center">
+      <h4>EditProduct</h4>
+      <ion-list>
+        <ion-item>
+          <ion-label>ProductId &nbsp;&nbsp;</ion-label>
+          <ion-input readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductName &nbsp;&nbsp;</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductPrice &nbsp;&nbsp;</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductDetail &nbsp;&nbsp;</ion-label>
+          <ion-input autofocus></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button color="success">Edit</ion-button>
+    </ion-col>
+    <ion-col size="3"></ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-content *ngIf="getStatus == 'Info'">
+  <ion-row>
+    <ion-col size="3"></ion-col>
+    <ion-col class="ion-text-center">
+      <h4>InfoProduct</h4>
+      <ion-list>
+        <ion-item>
+          <ion-label>ProductId &nbsp;&nbsp;</ion-label>
+          <ion-input readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductName &nbsp;&nbsp;</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductPrice &nbsp;&nbsp;</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>ProductDetail &nbsp;&nbsp;</ion-label>
+          <ion-input autofocus></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button color="success">Submit</ion-button>
+    </ion-col>
+    <ion-col size="3"></ion-col>
+  </ion-row>
+</ion-content>

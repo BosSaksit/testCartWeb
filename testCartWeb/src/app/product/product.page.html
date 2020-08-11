@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+ <ion-row>
+  <ion-col class="ion-text-start">
+    <ion-button (click)="gotoAddProduct()">
+      AddProduct
+    </ion-button>
+  </ion-col>
+  <ion-col></ion-col>
+   <ion-col></ion-col>
+ </ion-row>
+
+ <ion-row>
+   <ion-col>
+     <h3>ProductId</h3>
+   </ion-col>
+   <ion-col>
+    <h3>ProductName</h3>
+   </ion-col>
+   <ion-col>
+    <h3>ProductPrice</h3>
+   </ion-col>
+   <ion-col size="1">
+     <h3>Info</h3>
+   </ion-col>
+   <ion-col size="1">
+     <h3>Edit</h3>
+   </ion-col>
+   <ion-col size="1">
+     <h3>Delete</h3>
+   </ion-col>
+ </ion-row>
+
+ <div *ngIf="dataProduct != null">
+   <ion-row *ngFor="let p of dataProduct">
+     <ion-col>
+       <ion-label>{{ p.productId }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ p.productName }}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{ p.productPrice }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-button fill="outline" size="small" style="margin-top: -10px;" (click)="gotoInfoProduct(p.productId)">
+          <ion-icon slot="icon-only" name="reader"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+        <ion-button color="warning" fill="outline" size="small" style="margin-top: -10px;" (click)="gotoEditProduct(p.productId)">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+        <ion-button color="danger" fill="outline" size="small" style="margin-top: -10px;" (click)="deletedProduct(p.productId)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  </ion-content>
+  

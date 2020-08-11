@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br><br><br><br><br><br><br><br><br>
+  <ion-row>
+    <ion-col>
+
+    </ion-col>
+
+    <ion-col>
+      <ion-card (click)="gotoProduct()">
+        <ion-card-header class="ion-text-center">
+          
+          <ion-card-title>Product</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content class="ion-text-center">
+          <img width="50%" src="../../assets/icon/shelf.png">
+          <br>
+          <h6>Click</h6>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card (click)="gotoCart()">
+        <ion-card-header class="ion-text-center">
+          <ion-card-title>Cart</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content class="ion-text-center">
+          <img width="50%" src="../../assets/icon/buy.png">
+         <br>
+         <h6>Click</h6>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+
+    </ion-col>
+  </ion-row>
+</ion-content>
