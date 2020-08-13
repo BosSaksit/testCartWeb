@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CallapiService } from '../service/callapi.service';
+import { cart } from '../models/cart';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartPage implements OnInit {
 
-  constructor() { }
+  dataCart: cart
+
+  constructor(public callapi: CallapiService, public router: Router) { }
 
   ngOnInit() {
+    this.getDataCartAll();
   }
+
+  getDataCartAll() {
+    this.callapi.getCartAll().subscribe(it => {
+      this.dataCart = it;
+      console.log(this.dataCart);
+
+    });
+  }
+
+  gotoAddCart() {
+    this.router.navigate(['/cart-add']);
+  }
+
+  gotoCartDetail(cartId) {
+    this.router.navigate(['/cart-detail', { idCart: cartId }]);
+  }
+
+
 
 }

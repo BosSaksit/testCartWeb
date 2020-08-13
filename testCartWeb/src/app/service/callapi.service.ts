@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { product } from '../models/product';
+import { cart } from '../models/cart';
 
 
 @Injectable({
@@ -22,5 +23,17 @@ export class CallapiService {
 
   public deleteProductByid(idProduct){
     return this.http.delete<product>(CallapiService.host + "Products/DeleteProduct/" + idProduct);
+  }
+
+  public getCartAll(){
+    return this.http.get<cart>(CallapiService.host + "Carts/GetAllCarts");
+  }
+
+  public getCartDataByid(idCart){
+    return this.http.get<cart>(CallapiService.host + "Carts/GetCart/" + idCart);
+  }
+
+  public addCart(dataCart:cart){
+    return this.http.post<cart>(CallapiService.host + "Carts/AddCart" ,dataCart);
   }
 }

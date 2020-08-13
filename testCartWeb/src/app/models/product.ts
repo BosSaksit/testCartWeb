@@ -4,8 +4,3 @@ export class product {
     productPrice:number;
     productDetail:string;
 }
-
-export class productList {
-    productList:product;
-    productCount:number;
-}

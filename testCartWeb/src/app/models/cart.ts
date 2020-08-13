@@ -1,7 +1,7 @@
-import { productList } from './product';
+import { productList } from './productList';
 
 export class cart {
     cartId:string;
-    productList:productList
-    
+    productList:productList[];
+    cartTotal:number;
 }
